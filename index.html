@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aishwarya Anekar · Software Engineer Portfolio</title>
+  <meta name="description" content="Aishwarya Anekar — Information Technology student at VIIT Pune building AI, full-stack and Android projects." />
+  <meta name="theme-color" content="#07111d" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Aishwarya Anekar · Portfolio" />
+  <meta property="og:description" content="Aishwarya Anekar — full-stack developer building with AI, ML, web and Android technologies." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236CF0D2'/%3E%3Cstop offset='1' stop-color='%238C7BFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%230B0D24'/%3E%3Ccircle cx='32' cy='32' r='14' fill='url(%23g)'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="is-loading">
+
+  <!-- Loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__ring"><span></span><span></span><span></span></div>
+    <div class="loader__count"><span id="loaderCount">0</span>%</div>
+  </div>
+
+  <!-- Background layers -->
+  <div class="aurora" aria-hidden="true">
+    <span class="aurora__blob a1"></span>
+    <span class="aurora__blob a2"></span>
+    <span class="aurora__blob a3"></span>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__logo" aria-label="Home"><span class="nav__mark" id="navMark">AG</span></a>
+    <nav aria-label="Primary">
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#profiles">Coding Profiles</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact" class="nav__cta">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+      <div class="hero__panel">
+        <div class="hero__eyebrow"><span class="eyebrow-dot"></span> Software Engineer · AI &amp; Full-Stack</div>
+
+        <div class="hero__name-wrap" aria-label="Aishwarya Anekar">
+          <h1 class="hero__name" id="heroNameVisual" aria-label="Aishwarya Anekar">
+            <span class="signature-first">Aishwarya</span>
+            <span class="signature-last">ANEKAR</span>
+            <span class="signature-stroke" aria-hidden="true"></span>
+          </h1>
+        </div>
+
+        <p class="hero__role"><span id="typed"></span><span class="caret" aria-hidden="true"></span></p>
+        <p class="hero__tagline" id="heroTagline"></p>
+
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary magnetic"><span>View my work</span><span class="btn-arrow">↗</span></a>
+          <a href="assets/resume.pdf" class="btn btn--ghost magnetic" id="heroResume" download><span>Download resume</span></a>
+        </div>
+
+        <div class="dash-stats" id="heroStats"></div>
+      </div>
+
+      <div class="hero__girl" id="girl">
+        <div class="girl__halo" aria-hidden="true"></div>
+        <span class="girl__float f1" aria-hidden="true">&lt;/&gt;</span>
+        <span class="girl__float f2" aria-hidden="true">{ }</span>
+        <span class="girl__float f3" aria-hidden="true">✦</span>
+        <span class="girl__float f4" aria-hidden="true">λ</span>
+        <span class="girl__float f5" aria-hidden="true">✦</span>
+
+        <div class="girl__bubble" id="girlBubble" role="status" aria-live="polite"></div>
+
+        <button class="girl__hit" id="girlHit" type="button" aria-label="Say hi to the character"></button>
+
+        <svg class="girl__svg laptop-girl" viewBox="0 0 440 560" aria-hidden="true">
+<defs>
+<linearGradient id="lgHair" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#173b63"/><stop offset="1" stop-color="#08192d"/></linearGradient>
+<linearGradient id="lgHairHi" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3f82c8"/><stop offset="1" stop-color="#17365b"/></linearGradient>
+<linearGradient id="lgJacket" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b4770"/><stop offset="1" stop-color="#0c223b"/></linearGradient>
+<linearGradient id="lgLaptop" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d8e8f7"/><stop offset="1" stop-color="#7f9ab3"/></linearGradient>
+<linearGradient id="lgScreen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d2037"/><stop offset="1" stop-color="#102f4e"/></linearGradient>
+<radialGradient id="lgGlow"><stop offset="0" stop-color="#38d9ff" stop-opacity=".34"/><stop offset="1" stop-color="#38d9ff" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="225" cy="514" rx="148" ry="24" fill="#38d9ff" opacity=".08" class="laptop-shadow"/>
+<circle cx="226" cy="294" r="155" fill="url(#lgGlow)" opacity=".7" class="screen-glow"/>
+<g class="g-char">
+<g class="g-back">
+<path class="hair-back" fill="url(#lgHair)" d="M126 190 C101 104 148 62 220 62 C292 62 338 108 313 190 C328 251 320 320 294 369 L273 356 L167 356 L146 371 C119 319 112 250 126 190Z"/>
+<path fill="none" stroke="#3c77ad" stroke-width="5" opacity=".32" d="M143 153 C156 91 278 72 306 151"/>
+</g>
+<g class="g-body">
+<path fill="url(#lgJacket)" d="M116 351 C143 319 297 319 324 351 L353 483 C321 510 279 519 220 519 C161 519 119 510 87 483Z"/>
+<path fill="#f2f8ff" d="M196 348 L244 348 L250 430 L190 430Z"/>
+<path fill="#38d9ff" opacity=".85" d="M210 371 h20 v7 h-20z M210 387 h42 v6 h-42z M210 402 h30 v6 h-30z"/>
+<path fill="#163b5f" d="M128 454 C154 446 184 449 203 464 L189 522 L91 522 C91 493 104 468 128 454Z"/>
+<path fill="#12304d" d="M311 454 C286 446 256 449 237 464 L251 522 L349 522 C349 493 336 468 311 454Z"/>
+<path fill="#071524" d="M89 510 h106 c12 0 18 10 14 20 H78 c-3-9 1-16 11-20Z"/>
+<path fill="#071524" d="M235 510 h106 c10 4 14 11 11 20 H225 c-4-10 2-20 10-20Z"/>
+</g>
+<g class="g-head">
+<path fill="#ffe1d2" d="M157 184 C157 128 283 128 283 184 C283 238 269 281 220 301 C171 281 157 238 157 184Z"/>
+<path fill="url(#lgHairHi)" d="M150 188 C140 116 180 87 221 87 C274 87 302 127 289 190 L274 163 L264 201 L248 169 L231 202 L215 163 L198 200 L180 168 L167 204Z"/>
+<path class="hair-lock" fill="url(#lgHairHi)" d="M155 180 C128 238 130 303 154 357 C166 362 177 353 176 340 C163 282 168 231 180 194Z"/>
+<path class="hair-lock" fill="url(#lgHairHi)" d="M285 180 C312 238 310 303 286 357 C274 362 263 353 264 340 C277 282 272 231 260 194Z"/>
+<path fill="none" stroke="#8fb2cf" stroke-width="5" opacity=".35" stroke-linecap="round" d="M168 132 C199 104 247 102 276 131"/>
+<g class="eye eye-l"><ellipse cx="188" cy="215" rx="16" ry="18" fill="#fff"/><g class="iris"><ellipse cx="189" cy="217" rx="11" ry="14" fill="#38d9ff"/><ellipse cx="189" cy="219" rx="5" ry="8" fill="#071524"/><circle cx="184" cy="210" r="4" fill="#fff"/></g><path fill="none" stroke="#10233a" stroke-width="4" stroke-linecap="round" d="M171 201 Q188 191 204 201"/></g>
+<g class="eye eye-r"><ellipse cx="252" cy="215" rx="16" ry="18" fill="#fff"/><g class="iris"><ellipse cx="251" cy="217" rx="11" ry="14" fill="#38d9ff"/><ellipse cx="251" cy="219" rx="5" ry="8" fill="#071524"/><circle cx="246" cy="210" r="4" fill="#fff"/></g><path fill="none" stroke="#10233a" stroke-width="4" stroke-linecap="round" d="M235 201 Q251 191 268 201"/></g>
+<path fill="none" stroke="#c48f83" stroke-width="2" stroke-linecap="round" d="M220 226 L218 238"/>
+<path class="mouth-smirk" fill="none" stroke="#9f5868" stroke-width="3" stroke-linecap="round" d="M207 256 Q220 263 234 255"/>
+<path class="mouth-open" fill="#a95d6d" d="M207 255 Q220 262 234 255 Q230 270 219 270 Q209 268 207 255Z"/>
+<path fill="#38d9ff" d="M269 129 l5 9 10 1 -8 7 2 10 -9-5 -9 5 3-10 -8-7 10-1Z"/>
+</g>
+<g class="g-arms">
+<path fill="#1c4c76" d="M112 363 C85 381 91 421 121 442 L189 462 L202 437 L141 406 L154 374Z"/>
+<path fill="#214f78" d="M328 363 C355 381 349 421 319 442 L251 462 L238 437 L299 406 L286 374Z"/>
+<path fill="#ffe1d2" d="M178 435 C190 431 202 437 202 448 C201 458 191 464 180 460 L165 453Z"/>
+<path fill="#ffe1d2" d="M262 435 C250 431 238 437 238 448 C239 458 249 464 260 460 L275 453Z"/>
+</g>
+<g class="laptop" transform="translate(0,4)">
+<rect x="129" y="353" width="182" height="108" rx="9" fill="#0a1726" stroke="#9ab1c8" stroke-width="4"/>
+<rect x="139" y="363" width="162" height="88" rx="5" fill="url(#lgScreen)" stroke="#38d9ff" stroke-opacity=".55"/>
+<g opacity=".9"><path d="M153 381 H190" stroke="#38d9ff" stroke-width="4" stroke-linecap="round"/><path d="M153 394 H211" stroke="#7ea7ff" stroke-width="4" stroke-linecap="round"/><path d="M153 407 H180" stroke="#67e8f9" stroke-width="4" stroke-linecap="round"/><path d="M188 407 H231" stroke="#4f7cff" stroke-width="4" stroke-linecap="round"/><path d="M153 420 H203" stroke="#38d9ff" stroke-width="4" stroke-linecap="round"/><path d="M211 420 H278" stroke="#7ea7ff" stroke-width="4" stroke-linecap="round"/></g>
+<path d="M112 464 H328 L348 478 Q350 485 340 487 H100 Q90 485 92 478Z" fill="url(#lgLaptop)" stroke="#b7c9da" stroke-width="2"/>
+<rect x="205" y="468" width="30" height="5" rx="2.5" fill="#5d7388"/>
+</g>
+</g>
+</svg>
+
+
+        <div class="dash-card dash-card--status girl__status">
+          <span class="pulse" aria-hidden="true"></span>
+          <div>
+            <strong id="heroAvail"></strong>
+            <small id="heroLoc"></small>
+          </div>
+        </div>
+      </div>
+      <a href="#education" class="scroll-cue" aria-label="Scroll to education">
+        <span class="scroll-cue__mouse"><span></span></span>
+      </a>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true"><div class="marquee__track" id="marquee"></div></div>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section class="section" id="education">
+      <div class="section__head">
+        <h2 class="section__title split">Education</h2>
+        <p class="section__lead reveal">Where I learned the fundamentals.</p>
+      </div>
+      <div class="timeline" id="eduTimeline">
+        <div class="timeline__line"><span class="timeline__fill"></span></div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section" id="skills">
+      <div class="section__head">
+        <h2 class="section__title split">Skills</h2>
+        <p class="section__lead reveal">The tools I reach for, and how well I know them.</p>
+      </div>
+      <div class="skills">
+        <div class="orbit reveal" id="orbit" aria-hidden="true">
+          <div class="orbit__core"><span id="orbitCore">AG</span></div>
+          <div class="orbit__ring r1"></div>
+          <div class="orbit__ring r2"></div>
+          <div class="orbit__ring r3"></div>
+        </div>
+        <div class="skills__panel">
+          <div class="tabs" role="tablist" id="skillTabs"></div>
+          <div class="skill-grid" id="skillGrid" role="tabpanel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="section" id="experience">
+      <div class="section__head">
+        <h2 class="section__title split">Experience</h2>
+        <p class="section__lead reveal">Teams I've shipped with and what I built there.</p>
+      </div>
+      <div class="exp" id="expList">
+        <div class="exp__line"><span class="exp__fill"></span></div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section" id="projects">
+      <div class="section__head">
+        <h2 class="section__title split">Projects</h2>
+        <p class="section__lead reveal">Things I've designed, built and shipped.</p>
+      </div>
+      <div class="filters reveal" id="filters" role="group" aria-label="Filter projects"></div>
+      <div class="projects" id="projectGrid"></div>
+    </section>
+
+    <!-- ===================== ACHIEVEMENTS ===================== -->
+    <section class="section" id="achievements">
+      <div class="section__head">
+        <h2 class="section__title split">Achievements</h2>
+        <p class="section__lead reveal">Competitions, programs and milestones along the way.</p>
+      </div>
+      <div class="achs" id="achGrid"></div>
+    </section>
+
+    <!-- ===================== CERTIFICATIONS ===================== -->
+    <section class="section" id="certifications">
+      <div class="section__head">
+        <h2 class="section__title split">Certifications</h2>
+        <p class="section__lead reveal">Credentials that complement my engineering foundation.</p>
+      </div>
+      <div class="cert-grid" id="certGrid"></div>
+    </section>
+
+    <!-- ===================== CODING PROFILES ===================== -->
+    <section class="section" id="profiles">
+      <div class="section__head">
+        <h2 class="section__title split">Coding profiles</h2>
+        <p class="section__lead reveal">Where I practise problem solving and contribute code.</p>
+      </div>
+      <div class="profiles" id="profileGrid"></div>
+    </section>
+
+    <!-- ===================== RESUME ===================== -->
+    <section class="section" id="resume">
+      <div class="section__head">
+        <h2 class="section__title split">Resume</h2>
+        <p class="section__lead reveal">The one-page version of everything above.</p>
+      </div>
+      <div class="resume reveal">
+        <div class="resume__doc tilt">
+          <div class="resume__paper">
+            <span class="resume__line w80"></span>
+            <span class="resume__line w50"></span>
+            <span class="resume__gap"></span>
+            <span class="resume__line w95"></span>
+            <span class="resume__line w90"></span>
+            <span class="resume__line w70"></span>
+            <span class="resume__gap"></span>
+            <span class="resume__line w95"></span>
+            <span class="resume__line w85"></span>
+            <span class="resume__line w60"></span>
+            <span class="resume__gap"></span>
+            <span class="resume__line w90"></span>
+            <span class="resume__line w75"></span>
+            <div class="resume__scan"></div>
+          </div>
+        </div>
+        <div class="resume__info">
+          <h3>Grab a copy</h3>
+          <p>A PDF with my education, experience, projects and skills. Updated <span id="resumeDate"></span>.</p>
+          <div class="resume__actions">
+            <a class="btn btn--primary magnetic" id="resumeDownload" href="assets/resume.pdf" download><span>Download PDF</span></a>
+            <button class="btn btn--ghost magnetic" id="resumeView" type="button"><span>Preview here</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section--contact" id="contact">
+      <div class="contact">
+        <div class="contact__intro">
+          <h2 class="contact__title split">Let's build something together.</h2>
+          <p class="reveal">Have a role, a project or just a question? My inbox is open and I usually reply within a day.</p>
+          <a class="contact__mail reveal" id="contactMail" href="#"></a>
+          <div class="socials reveal" id="socials"></div>
+        </div>
+
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <input id="f-name" name="name" type="text" placeholder=" " required autocomplete="name" />
+            <label for="f-name">Your name</label>
+          </div>
+          <div class="field">
+            <input id="f-email" name="email" type="email" placeholder=" " required autocomplete="email" />
+            <label for="f-email">Your email</label>
+          </div>
+          <div class="field">
+            <textarea id="f-msg" name="message" rows="5" placeholder=" " required></textarea>
+            <label for="f-msg">Message</label>
+          </div>
+          <button class="btn btn--primary btn--block magnetic" type="submit"><span id="sendLabel">Send message</span></button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> <span id="footName">Aishwarya Anekar</span>. Built from scratch with HTML, CSS and JavaScript.</p>
+    <a href="#home" class="to-top" aria-label="Back to top">↑</a>
+  </footer>
+
+  <!-- Resume preview modal -->
+  <div class="modal" id="resumeModal" role="dialog" aria-modal="true" aria-label="Resume preview" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box">
+      <button class="modal__close" data-close aria-label="Close preview">✕</button>
+      <iframe id="resumeFrame" title="Resume PDF"></iframe>
+    </div>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

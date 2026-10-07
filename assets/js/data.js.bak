@@ -1,0 +1,212 @@
+/* ========================================================================
+   Aishwarya Anekar — portfolio content
+   All personal/content details live in this file.
+   ======================================================================== */
+
+const PORTFOLIO = {
+  /* ---------- Basics ---------- */
+  name: "Aishwarya Anekar",
+  shortName: "AA",
+  roles: [
+    "Full-stack developer",
+    "AI & ML enthusiast",
+    "Problem solver",
+    "Information Technology student"
+  ],
+  tagline:
+    "I build practical software with a focus on full-stack development, artificial intelligence and meaningful user experiences.",
+  location: "Pune, India",
+  availability: "Open to opportunities & collaborations",
+  email: "aishwaryaanekar15@gmail.com",
+  resume: "assets/resume.pdf",
+
+  /* The original character animation is intentionally replaced by a
+     network/constellation hero animation for a cleaner developer aesthetic. */
+  girl: {
+    enabled: false,
+    lines: []
+  },
+
+  /* Quick numbers shown on the hero dashboard */
+  stats: [
+    { value: 9.15, suffix: "", label: "B.Tech CGPA" },
+    { value: 4, suffix: "+", label: "Featured projects" },
+    { value: 300, suffix: "+", label: "Problems solved" }
+  ],
+
+  /* ---------- Education ---------- */
+  education: [
+    {
+      degree: "Bachelor of Technology in Information Technology",
+      school: "BRACT’s Vishwakarma Institute of Information Technology, Pune",
+      period: "2024 – 2027",
+      score: "CGPA 9.15",
+      details: [
+        "Relevant coursework: Data Structures & Algorithms, DBMS, Object-Oriented Programming, Networking, Operating Systems"
+      ]
+    },
+    {
+      degree: "Diploma in Computer Engineering",
+      school: "Government Polytechnic, Karad",
+      period: "2021 – 2024",
+      score: "93.43%",
+      details: [
+        "Built a strong foundation in programming, web development, databases and computer engineering fundamentals"
+      ]
+    }
+  ],
+
+  /* ---------- Skills ---------- */
+  skills: {
+    Languages: [
+      { name: "Java", icon: "devicon-java-plain colored", level: 88 },
+      { name: "Python", icon: "devicon-python-plain colored", level: 86 },
+      { name: "C++", icon: "devicon-cplusplus-plain colored", level: 80 },
+      { name: "C", icon: "devicon-c-plain colored", level: 76 },
+      { name: "SQL", icon: "devicon-mysql-plain colored", level: 82 },
+      { name: "JavaScript", icon: "devicon-javascript-plain colored", level: 84 }
+    ],
+    "Web & Frameworks": [
+      { name: "HTML/CSS", icon: "devicon-html5-plain colored", level: 90 },
+      { name: "React", icon: "devicon-react-original colored", level: 82 },
+      { name: "Node.js", icon: "devicon-nodejs-plain colored", level: 80 },
+      { name: "FastAPI", icon: "devicon-fastapi-plain colored", level: 74 },
+      { name: "Tailwind CSS", icon: "devicon-tailwindcss-original colored", level: 76 }
+    ],
+    "AI & Data": [
+      { name: "Machine Learning", icon: "", level: 78 },
+      { name: "Gemini API", icon: "", level: 78 },
+      { name: "Ollama", icon: "", level: 72 },
+      { name: "Firebase", icon: "devicon-firebase-plain colored", level: 80 },
+      { name: "Google Maps", icon: "", level: 72 }
+    ],
+    Tools: [
+      { name: "Git", icon: "devicon-git-plain colored", level: 86 },
+      { name: "GitHub", icon: "devicon-github-original colored", level: 88 },
+      { name: "VS Code", icon: "devicon-vscode-plain colored", level: 90 },
+      { name: "PyCharm", icon: "devicon-pycharm-plain colored", level: 76 },
+      { name: "IntelliJ IDEA", icon: "devicon-intellij-plain colored", level: 78 },
+      { name: "Android Studio", icon: "devicon-androidstudio-plain colored", level: 82 }
+    ]
+  },
+
+  /* ---------- Experience ---------- */
+  experience: [
+    {
+      role: "Web Developer Intern",
+      company: "Happy Visitors Dot Com",
+      period: "Jul 2023 – Aug 2023",
+      duration: "6 weeks",
+      location: "Kolhapur, Maharashtra",
+      points: [
+        "Successfully completed a 6-week full-time internship in Advanced Trends in Web Development, gaining hands-on experience with modern web technologies.",
+        "Gained in-depth knowledge of HTML and CSS and strengthened practical web development skills.",
+        "Learned website hosting, domain purchasing and creation of business accounts for web projects."
+      ],
+      tech: ["HTML", "CSS", "Web Development", "Hosting"]
+    }
+  ],
+
+  /* ---------- Projects ---------- */
+  projects: [
+    {
+      title: "EcoUrban-AI — Urban Heat Island Detection & Mitigation",
+      category: "AI / ML",
+      description:
+        "A full-stack MLOps platform that uses Landsat-8 satellite data to predict urban heat patterns and combines an AI assistant for cooling-strategy simulation and data-driven urban planning recommendations.",
+      tech: ["ML", "React", "Python", "Node.js", "Docker", "scikit-learn", "LangGraph", "Ollama"],
+      image: "",
+      live: "",
+      code: "https://github.com/Aishwarya-Anekar",
+      featured: true
+    },
+    {
+      title: "EchoCraft — Podcast Generator",
+      category: "AI / Full Stack",
+      description:
+        "An intelligent content creation system that generates multilingual, lifelike podcast audio from text with segment-wise playback and automatically merges audio segments into a unified production-ready file.",
+      tech: ["React.js", "Node.js", "Firebase", "Murf AI API", "Google Gemini API"],
+      image: "",
+      live: "",
+      code: "https://github.com/Aishwarya-Anekar"
+    },
+    {
+      title: "Smart ML Model Trainer",
+      category: "AI / ML",
+      description:
+        "A guided full-stack ML training platform for dataset upload, algorithm selection, model training and .pkl export, with dataset validation, clear metrics and user feedback to prevent silent failures.",
+      tech: ["React", "JavaScript", "Tailwind CSS", "Node.js", "FastAPI"],
+      image: "",
+      live: "",
+      code: "https://github.com/Aishwarya-Anekar"
+    },
+    {
+      title: "JeevanJyot — Healthcare Android Application",
+      category: "Android",
+      description:
+        "A healthcare Android application for doctor discovery, appointment booking and emergency remedies, with location-based recommendations and medicine identification from uploaded photos.",
+      tech: ["Java", "Android", "Gemini API", "Google Maps"],
+      image: "",
+      live: "",
+      code: "https://github.com/Aishwarya-Anekar"
+    }
+  ],
+
+  /* ---------- Achievements + Certifications ---------- */
+  achievements: [
+    { highlight: "1st", title: "Avishkar Coding Competition", detail: "1st position · Government College of Engineering, Karad" },
+    { highlight: "1st RU", title: "AptiTech AlgoChamp", detail: "1st Runner Up · EnrollEngineer" },
+    { highlight: "2nd", title: "IEEE MMCOE Ideathon", detail: "Secured 2nd rank" },
+    { highlight: "Patent", title: "AI-Based File-Type-Adaptive Encryption & Decryption System", detail: "Filed a patent using AES, RSA & ChaCha20" },
+    { highlight: "300+", title: "Problems solved", detail: "Across platforms including LeetCode and HackerRank" },
+    { highlight: "CCNA", title: "CCNAv7: Introduction to Networks", detail: "Cisco Networking Academy · Completed Dec 2024", link: "assets/certifications/CCNA-Introduction-to-Networks.pdf" },
+    { highlight: "AI", title: "Bootcamp on Artificial Intelligence", detail: "C-DAC Pune · FutureSkills PRIME · Completed Aug 2025", link: "assets/certifications/AI-Bootcamp-Certificate.pdf" }
+  ],
+
+  /* ---------- Coding / professional profiles ---------- */
+  codingProfiles: [
+    {
+      platform: "GitHub",
+      username: "Aishwarya-Anekar",
+      url: "https://github.com/Aishwarya-Anekar",
+      stat: 44,
+      statLabel: "repositories",
+      extra: "Projects in AI, full-stack development and Android",
+      progress: 88,
+      color: "#C9D1FF"
+    },
+    {
+      platform: "LinkedIn",
+      username: "aishwarya-anekar",
+      url: "https://www.linkedin.com/in/aishwarya-anekar-9a4030326",
+      stat: null,
+      statLabel: "",
+      extra: "Professional profile, projects and achievements",
+      progress: 82,
+      color: "#70B7FF"
+    },
+    {
+      platform: "Problem Solving",
+      username: "",
+      url: "",
+      stat: 300,
+      suffix: "+",
+      statLabel: "problems solved",
+      extra: "LeetCode, HackerRank and other platforms",
+      progress: 76,
+      color: "#6CF0D2"
+    }
+  ],
+
+  /* ---------- Contact & socials ---------- */
+  socials: {
+    github: "https://github.com/Aishwarya-Anekar",
+    linkedin: "https://www.linkedin.com/in/aishwarya-anekar-9a4030326",
+    instagram: "",
+    youtube: "",
+    medium: "",
+    twitter: ""
+  },
+
+  formspreeId: ""
+};

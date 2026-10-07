@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aishwarya Anekar · Software Engineer Portfolio</title>
+  <meta name="description" content="Aishwarya Anekar — Information Technology student at VIIT Pune building AI, full-stack and Android projects." />
+  <meta name="theme-color" content="#0B0D24" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Aishwarya Anekar · Portfolio" />
+  <meta property="og:description" content="Aishwarya Anekar — full-stack developer building with AI, ML, web and Android technologies." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236CF0D2'/%3E%3Cstop offset='1' stop-color='%238C7BFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%230B0D24'/%3E%3Ccircle cx='32' cy='32' r='14' fill='url(%23g)'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="is-loading">
+
+  <!-- Loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__ring"><span></span><span></span><span></span></div>
+    <div class="loader__count"><span id="loaderCount">0</span>%</div>
+  </div>
+
+  <!-- Background layers -->
+  <div class="aurora" aria-hidden="true">
+    <span class="aurora__blob a1"></span>
+    <span class="aurora__blob a2"></span>
+    <span class="aurora__blob a3"></span>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__logo" aria-label="Home"><span class="nav__mark" id="navMark">AG</span></a>
+    <nav aria-label="Primary">
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Awards &amp; Certifications</a></li>
+        <li><a href="#profiles">Profiles</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact" class="nav__cta">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+      <div class="hero__panel">
+        <div class="hero__eyebrow"><span class="eyebrow-dot"></span> Software Engineer · AI &amp; Full-Stack</div>
+
+        <div class="hero__name-wrap" aria-label="Aishwarya Anekar">
+          <h1 class="hero__name" id="heroNameVisual">
+            <span class="name-line">Aishwarya</span>
+            <span class="name-line name-line--last">Anekar<span class="name-caret">_</span></span>
+          </h1>
+        </div>
+
+        <p class="hero__role"><span id="typed"></span><span class="caret" aria-hidden="true"></span></p>
+        <p class="hero__tagline" id="heroTagline"></p>
+
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary magnetic"><span>View my work</span><span class="btn-arrow">↗</span></a>
+          <a href="assets/resume.pdf" class="btn btn--ghost magnetic" id="heroResume" download><span>Download resume</span></a>
+        </div>
+
+        <div class="dash-stats" id="heroStats"></div>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="code-window">
+          <div class="code-window__bar">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <span>developer.config</span>
+            <span class="window-status">● available</span>
+          </div>
+          <div class="code-window__body">
+            <div class="code-line"><span class="ln">01</span><span><b class="syntax-key">const</b> developer = {</span></div>
+            <div class="code-line"><span class="ln">02</span><span>&nbsp;&nbsp;name: <em>"Aishwarya Anekar"</em>,</span></div>
+            <div class="code-line"><span class="ln">03</span><span>&nbsp;&nbsp;focus: [<em>"AI"</em>, <em>"Full-Stack"</em>],</span></div>
+            <div class="code-line"><span class="ln">04</span><span>&nbsp;&nbsp;stack: [<em>"Java"</em>, <em>"Python"</em>, <em>"React"</em>],</span></div>
+            <div class="code-line"><span class="ln">05</span><span>&nbsp;&nbsp;build: <em>"useful software"</em></span></div>
+            <div class="code-line"><span class="ln">06</span><span>};<span class="typing-cursor"></span></span></div>
+          </div>
+          <div class="code-window__footer">
+            <span>⌁ Pune, India</span><span>git · main</span>
+          </div>
+        </div>
+        <div class="visual-accent accent-one"></div>
+        <div class="visual-accent accent-two"></div>
+      </div>
+
+      <a href="#education" class="scroll-cue" aria-label="Scroll to education">
+        <span class="scroll-cue__mouse"><span></span></span>
+      </a>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true"><div class="marquee__track" id="marquee"></div></div>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section class="section" id="education">
+      <div class="section__head">
+        <h2 class="section__title split">Education</h2>
+        <p class="section__lead reveal">Where I learned the fundamentals.</p>
+      </div>
+      <div class="timeline" id="eduTimeline">
+        <div class="timeline__line"><span class="timeline__fill"></span></div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section" id="skills">
+      <div class="section__head">
+        <h2 class="section__title split">Skills</h2>
+        <p class="section__lead reveal">The tools I reach for, and how well I know them.</p>
+      </div>
+      <div class="skills">
+        <div class="orbit reveal" id="orbit" aria-hidden="true">
+          <div class="orbit__core"><span id="orbitCore">AG</span></div>
+          <div class="orbit__ring r1"></div>
+          <div class="orbit__ring r2"></div>
+          <div class="orbit__ring r3"></div>
+        </div>
+        <div class="skills__panel">
+          <div class="tabs" role="tablist" id="skillTabs"></div>
+          <div class="skill-grid" id="skillGrid" role="tabpanel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="section" id="experience">
+      <div class="section__head">
+        <h2 class="section__title split">Experience</h2>
+        <p class="section__lead reveal">Teams I've shipped with and what I built there.</p>
+      </div>
+      <div class="exp" id="expList">
+        <div class="exp__line"><span class="exp__fill"></span></div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section" id="projects">
+      <div class="section__head">
+        <h2 class="section__title split">Projects</h2>
+        <p class="section__lead reveal">Things I've designed, built and shipped.</p>
+      </div>
+      <div class="filters reveal" id="filters" role="group" aria-label="Filter projects"></div>
+      <div class="projects" id="projectGrid"></div>
+    </section>
+
+    <!-- ===================== ACHIEVEMENTS ===================== -->
+    <section class="section" id="achievements">
+      <div class="section__head">
+        <h2 class="section__title split">Achievements</h2>
+        <p class="section__lead reveal">Competitions, programs and milestones along the way.</p>
+      </div>
+      <div class="achs" id="achGrid"></div>
+    </section>
+
+    <!-- ===================== CODING PROFILES ===================== -->
+    <section class="section" id="profiles">
+      <div class="section__head">
+        <h2 class="section__title split">Coding profiles</h2>
+        <p class="section__lead reveal">Where I practise problem solving and contribute code.</p>
+      </div>
+      <div class="profiles" id="profileGrid"></div>
+    </section>
+
+    <!-- ===================== RESUME ===================== -->
+    <section class="section" id="resume">
+      <div class="section__head">
+        <h2 class="section__title split">Resume</h2>
+        <p class="section__lead reveal">The one-page version of everything above.</p>
+      </div>
+      <div class="resume reveal">
+        <div class="resume__doc tilt">
+          <div class="resume__paper">
+            <span class="resume__line w80"></span>
+            <span class="resume__line w50"></span>
+            <span class="resume__gap"></span>
+            <span class="resume__line w95"></span>
+            <span class="resume__line w90"></span>
+            <span class="resume__line w70"></span>
+            <span class="resume__gap"></span>
+            <span class="resume__line w95"></span>
+            <span class="resume__line w85"></span>
+            <span class="resume__line w60"></span>
+            <span class="resume__gap"></span>
+            <span class="resume__line w90"></span>
+            <span class="resume__line w75"></span>
+            <div class="resume__scan"></div>
+          </div>
+        </div>
+        <div class="resume__info">
+          <h3>Grab a copy</h3>
+          <p>A PDF with my education, experience, projects and skills. Updated <span id="resumeDate"></span>.</p>
+          <div class="resume__actions">
+            <a class="btn btn--primary magnetic" id="resumeDownload" href="assets/resume.pdf" download><span>Download PDF</span></a>
+            <button class="btn btn--ghost magnetic" id="resumeView" type="button"><span>Preview here</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section--contact" id="contact">
+      <div class="contact">
+        <div class="contact__intro">
+          <h2 class="contact__title split">Let's build something together.</h2>
+          <p class="reveal">Have a role, a project or just a question? My inbox is open and I usually reply within a day.</p>
+          <a class="contact__mail reveal" id="contactMail" href="#"></a>
+          <div class="socials reveal" id="socials"></div>
+        </div>
+
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <input id="f-name" name="name" type="text" placeholder=" " required autocomplete="name" />
+            <label for="f-name">Your name</label>
+          </div>
+          <div class="field">
+            <input id="f-email" name="email" type="email" placeholder=" " required autocomplete="email" />
+            <label for="f-email">Your email</label>
+          </div>
+          <div class="field">
+            <textarea id="f-msg" name="message" rows="5" placeholder=" " required></textarea>
+            <label for="f-msg">Message</label>
+          </div>
+          <button class="btn btn--primary btn--block magnetic" type="submit"><span id="sendLabel">Send message</span></button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> <span id="footName">Aishwarya Anekar</span>. Built from scratch with HTML, CSS and JavaScript.</p>
+    <a href="#home" class="to-top" aria-label="Back to top">↑</a>
+  </footer>
+
+  <!-- Resume preview modal -->
+  <div class="modal" id="resumeModal" role="dialog" aria-modal="true" aria-label="Resume preview" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box">
+      <button class="modal__close" data-close aria-label="Close preview">✕</button>
+      <iframe id="resumeFrame" title="Resume PDF"></iframe>
+    </div>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
