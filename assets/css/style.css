@@ -636,7 +636,7 @@ body.ready .hero__actions, body.ready .dash-stats { opacity: 1; transform: none;
   font-size: .78rem; font-weight: 700; background: rgba(11, 13, 36, .7); backdrop-filter: blur(8px);
   border: 1px solid var(--line);
 }
-.project__body { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1; transform: translateZ(30px); }
+.project__body { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1; transform: translateZ(0); }
 .project__body h3 { font-size: 1.4rem; margin-bottom: 8px; }
 .project__body p { margin: 0 0 16px; color: var(--muted); font-size: .95rem; flex: 1; }
 .project__links { display: flex; gap: 10px; margin-top: 18px; }
