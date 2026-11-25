@@ -18,7 +18,6 @@ const PORTFOLIO = {
   location: "Pune, India",
   availability: "Open to opportunities & collaborations",
   email: "aishwaryaanekar15@gmail.com",
-  resume: "assets/resume.pdf",
 
   /* The original character animation is intentionally replaced by a
      network/constellation hero animation for a cleaner developer aesthetic. */
@@ -172,7 +171,7 @@ const PORTFOLIO = {
     {
       platform: "LeetCode",
       username: "Aishwarya_H_Anekar",
-      url: "https://leetcode.com/u/Aishwarya_H_Anekar/",
+      // url: "https://leetcode.com/u/Aishwarya_H_Anekar/",
       stat: 500,
       suffix: "+",
       statLabel: "problems solved",
@@ -183,7 +182,7 @@ const PORTFOLIO = {
     {
       platform: "HackerRank",
       username: "aishwaryaanekar2",
-      url: "https://www.hackerrank.com/profile/aishwaryaanekar2",
+      // url: "https://www.hackerrank.com/profile/aishwaryaanekar2",
       stat: 4,
       suffix: "★",
       statLabel: "problem solving",

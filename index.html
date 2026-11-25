@@ -53,7 +53,6 @@
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#certifications">Certifications</a></li>
         <li><a href="#profiles">Coding Profiles</a></li>
-        <li><a href="#resume">Resume</a></li>
         <li><a href="#contact" class="nav__cta">Contact</a></li>
       </ul>
     </nav>
@@ -84,7 +83,6 @@
 
         <div class="hero__actions">
           <a href="#projects" class="btn btn--primary magnetic"><span>View my work</span><span class="btn-arrow">↗</span></a>
-          <a href="assets/resume.pdf" class="btn btn--ghost magnetic" id="heroResume" download><span>Download resume</span></a>
         </div>
 
         <div class="dash-stats" id="heroStats"></div>
@@ -252,42 +250,6 @@
       <div class="profiles" id="profileGrid"></div>
     </section>
 
-    <!-- ===================== RESUME ===================== -->
-    <section class="section" id="resume">
-      <div class="section__head">
-        <h2 class="section__title split">Resume</h2>
-        <p class="section__lead reveal">The one-page version of everything above.</p>
-      </div>
-      <div class="resume reveal">
-        <div class="resume__doc tilt">
-          <div class="resume__paper">
-            <span class="resume__line w80"></span>
-            <span class="resume__line w50"></span>
-            <span class="resume__gap"></span>
-            <span class="resume__line w95"></span>
-            <span class="resume__line w90"></span>
-            <span class="resume__line w70"></span>
-            <span class="resume__gap"></span>
-            <span class="resume__line w95"></span>
-            <span class="resume__line w85"></span>
-            <span class="resume__line w60"></span>
-            <span class="resume__gap"></span>
-            <span class="resume__line w90"></span>
-            <span class="resume__line w75"></span>
-            <div class="resume__scan"></div>
-          </div>
-        </div>
-        <div class="resume__info">
-          <h3>Grab a copy</h3>
-          <p>A PDF with my education, experience, projects and skills. Updated <span id="resumeDate"></span>.</p>
-          <div class="resume__actions">
-            <a class="btn btn--primary magnetic" id="resumeDownload" href="assets/resume.pdf" download><span>Download PDF</span></a>
-            <button class="btn btn--ghost magnetic" id="resumeView" type="button"><span>Preview here</span></button>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ===================== CONTACT ===================== -->
     <section class="section section--contact" id="contact">
       <div class="contact">
@@ -322,15 +284,6 @@
     <p>© <span id="year"></span> <span id="footName">Aishwarya Anekar</span>. Built from scratch with HTML, CSS and JavaScript.</p>
     <a href="#home" class="to-top" aria-label="Back to top">↑</a>
   </footer>
-
-  <!-- Resume preview modal -->
-  <div class="modal" id="resumeModal" role="dialog" aria-modal="true" aria-label="Resume preview" hidden>
-    <div class="modal__backdrop" data-close></div>
-    <div class="modal__box">
-      <button class="modal__close" data-close aria-label="Close preview">✕</button>
-      <iframe id="resumeFrame" title="Resume PDF"></iframe>
-    </div>
-  </div>
 
   <script src="assets/js/data.js"></script>
   <script src="assets/js/main.js"></script>

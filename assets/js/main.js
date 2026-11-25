@@ -52,7 +52,6 @@
     $("#orbitCore").textContent = D.shortName;
     $("#footName").textContent = D.name;
     $("#year").textContent = new Date().getFullYear();
-    ["#heroResume", "#resumeDownload"].forEach(s => $(s).setAttribute("href", D.resume));
     if (!D.girl || D.girl.enabled === false) $(".hero").classList.add("no-girl");
 
     // hero stats
@@ -163,9 +162,6 @@
           <a class="cert-card__link" href="${esc(c.link)}" target="_blank" rel="noopener">View certificate ${ICON.arrow}</a>
         </div>
       </article>`).join("");
-
-    // resume date
-    $("#resumeDate").textContent = new Date(document.lastModified).toLocaleDateString(undefined, { month: "long", year: "numeric" });
 
     // contact
     const mail = $("#contactMail");
@@ -685,34 +681,6 @@
     }, { passive: true });
   }
 
-  /* ======================================================================
-     7. Resume preview + contact form
-     ====================================================================== */
-  function resumeModal() {
-    const modal = $("#resumeModal"), frame = $("#resumeFrame");
-    let lastFocus;
-    const open = () => {
-      lastFocus = document.activeElement;
-      frame.src = D.resume;
-      modal.hidden = false;
-      document.body.style.overflow = "hidden";
-      $(".modal__close", modal).focus();
-    };
-    const close = () => {
-      modal.hidden = true;
-      frame.src = "about:blank";
-      document.body.style.overflow = "";
-      lastFocus && lastFocus.focus();
-    };
-    $("#resumeView").addEventListener("click", () => {
-      // phones can't show PDFs inline reliably — open in a new tab instead
-      if (window.innerWidth < 700) window.open(D.resume, "_blank", "noopener");
-      else open();
-    });
-    modal.addEventListener("click", e => { if (e.target.closest("[data-close]")) close(); });
-    document.addEventListener("keydown", e => { if (e.key === "Escape" && !modal.hidden) close(); });
-  }
-
   function contactForm() {
     const form = $("#contactForm"), status = $("#formStatus"), label = $("#sendLabel");
     form.addEventListener("submit", async e => {
@@ -792,7 +760,6 @@
         observeReveals();
         scrollChrome();
         pointerFx();
-        resumeModal();
         contactForm();
       }, 250);
     });
