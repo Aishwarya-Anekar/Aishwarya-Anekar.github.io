@@ -15,7 +15,6 @@ No frameworks and no build step, so it runs on GitHub Pages exactly as it is.
 | Experience | Alternating timeline, cards slide in from each side |
 | Projects | Category filter with smooth FLIP re-layout, 3D tilt + glare on hover |
 | Coding profiles | Progress rings that fill, number count-ups, rotating glow border on hover |
-| Resume | Floating paper with a scan line, download + in-page PDF preview |
 | Contact | Floating-label form with validation, magnetic buttons, social links |
 | Everywhere | Custom cursor, scroll progress bar, split-letter headings, aurora background, auto-hiding nav |
 
@@ -25,13 +24,12 @@ It respects "reduce motion" settings, works with keyboard, and is responsive dow
 
 1. **Edit `assets/js/data.js`** — name, roles, education, skills, experience,
    projects, coding profiles, socials and email all live in this one file.
-2. **Replace `assets/resume.pdf`** with your real resume (keep the same file name).
-3. **Project screenshots (optional):** put images in `assets/img/` and set
+2. **Project screenshots (optional):** put images in `assets/img/` and set
    `image: "assets/img/your-shot.png"` on the project. Leave it `""` to get a
    generated gradient cover.
-4. **Skill icons:** use any class from [devicon.dev](https://devicon.dev),
+3. **Skill icons:** use any class from [devicon.dev](https://devicon.dev),
    e.g. `devicon-react-original colored`.
-5. **Contact form:** by default it opens the visitor's email app. To receive
+4. **Contact form:** by default it opens the visitor's email app. To receive
    messages directly, create a free form at [formspree.io](https://formspree.io)
    and paste its ID into `formspreeId` in `data.js`.
 6. Update the `<title>` and description tags at the top of `index.html`
@@ -74,7 +72,6 @@ index.html            page structure
 assets/css/style.css  all styles and keyframe animations
 assets/js/data.js     ← your content
 assets/js/main.js     rendering + animation logic
-assets/resume.pdf     ← your resume
 assets/img/           project screenshots
 .nojekyll             tells GitHub Pages to serve files as-is
 ```
